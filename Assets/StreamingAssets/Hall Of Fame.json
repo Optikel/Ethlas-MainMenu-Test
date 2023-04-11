@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "name": "Player 1",
+      "score": "211",
+      "playtime": "06m 13s"
+    },
+    {
+      "name": "Player 2",
+      "score": "208",
+      "playtime": "06m 48s"
+    },
+    {
+      "name": "Player 3",
+      "score": "205",
+      "playtime": "05m 58s"
+    },
+    {
+      "name": "Player 4",
+      "score": "201",
+      "playtime": "05m 24s"
+    },
+    {
+      "name": "Player 5",
+      "score": "200",
+      "playtime": "05m 37s"
+    },
+    {
+      "name": "Player 6",
+      "score": "190",
+      "playtime": "04m 58s"
+    },
+    {
+      "name": "Player 7",
+      "score": "188",
+      "playtime": "04m 48s"
+    },
+    {
+      "name": "Player 8",
+      "score": "185",
+      "playtime": "04m 54s"
+    },
+    {
+      "name": "Player 9",
+      "score": "184",
+      "playtime": "04m 47s"
+    },
+    {
+      "name": "Player 10",
+      "score": "184",
+      "playtime": "04m 54s"
+    },
+    {
+      "name": "Player 11",
+      "score": "184",
+      "playtime": "05m 18s"
+    },
+    {
+      "name": "Player 12",
+      "score": "183",
+      "playtime": "04m 47s"
+    },
+    {
+      "name": "Player 13",
+      "score": "183",
+      "playtime": "04m 49s"
+    }
+  ]
+}
