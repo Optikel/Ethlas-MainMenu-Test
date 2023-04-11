@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
-public class LeaderboardEntry : MonoBehaviour
+public class HallOfFameEntry : MonoBehaviour
 {
     [SerializeField] private Image m_PositionImage;
     [SerializeField] private TMP_Text m_PositionText;
@@ -14,7 +15,7 @@ public class LeaderboardEntry : MonoBehaviour
     [SerializeField] private TMP_Text m_Score;
     [SerializeField] private TMP_Text m_PlayTime;
 
-    public void Initialize(LeaderboardData data, int position)
+    public void Initialize(HallOfFameData data, int position)
     {
         if (position < 3)
         {
