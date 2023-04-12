@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEditor;
 
 
 public class AnimatedButton : Button
 {
-    [SerializeField] internal float m_ExpandFactor;
-    [SerializeField] internal float m_ExpandTime;
+    [SerializeField] public float m_ExpandFactor;
+    [SerializeField] public float m_ExpandTime;
 
     Vector3 _InitialScale;
 
@@ -40,21 +39,5 @@ public class AnimatedButton : Button
         float time = m_ExpandTime * ratio;
         LeanTween.scale(gameObject, _InitialScale, time);
 
-    }
-}
-
-[CustomEditor(typeof(AnimatedButton))]
-public class AnimatedButtonEditor : UnityEditor.UI.ButtonEditor
-{
-    public override void OnInspectorGUI()
-    {
-        EditorGUILayout.LabelField("Animation", EditorStyles.boldLabel);
-        AnimatedButton targetButton = (AnimatedButton)target;
-        targetButton.m_ExpandTime = EditorGUILayout.FloatField("Expand Time", targetButton.m_ExpandTime);
-        targetButton.m_ExpandFactor = EditorGUILayout.FloatField("Expand Factor", targetButton.m_ExpandFactor);
-
-        EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Button", EditorStyles.boldLabel);
-        base.OnInspectorGUI();
     }
 }

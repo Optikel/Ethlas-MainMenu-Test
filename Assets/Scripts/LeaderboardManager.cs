@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.IO;
 
 public class LeaderboardManager : MonoBehaviour
 {
@@ -56,10 +57,16 @@ public class LeaderboardManager : MonoBehaviour
 
         IEnumerator RequestLeaderboardData()
         {
-            string path = Application.streamingAssetsPath + "/LeaderBoard.json";
+            string path = Path.Combine(Application.streamingAssetsPath, "Leaderboard.json");
             UnityWebRequest req = UnityWebRequest.Get(path);
 
             yield return req.SendWebRequest();
+
+            if (req.error != null)
+            {
+                Debug.LogError("uwrReader error: " + req.error);
+                Debug.LogError(path);
+            }
 
             var jobj = JObject.Parse(req.downloadHandler.text);
 
